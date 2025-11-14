@@ -1,0 +1,11 @@
+C:\Users\HP PROBOOK\Desktop\ADO\Even, Odd, Factorial\obj\Debug\Even, Odd, Factorial.csproj.AssemblyReference.cache
+C:\Users\HP PROBOOK\Desktop\ADO\Even, Odd, Factorial\obj\Debug\Even__Odd__Factorial.Form1.resources
+C:\Users\HP PROBOOK\Desktop\ADO\Even, Odd, Factorial\obj\Debug\Even__Odd__Factorial.Properties.Resources.resources
+C:\Users\HP PROBOOK\Desktop\ADO\Even, Odd, Factorial\obj\Debug\Even, Odd, Factorial.csproj.GenerateResource.cache
+C:\Users\HP PROBOOK\Desktop\ADO\Even, Odd, Factorial\obj\Debug\Even, Odd, Factorial.csproj.CoreCompileInputs.cache
+C:\Users\HP PROBOOK\Desktop\ADO\Even, Odd, Factorial\bin\Debug\Even, Odd, Factorial.exe.config
+C:\Users\HP PROBOOK\Desktop\ADO\Even, Odd, Factorial\bin\Debug\Even, Odd, Factorial.exe
+C:\Users\HP PROBOOK\Desktop\ADO\Even, Odd, Factorial\bin\Debug\Even, Odd, Factorial.pdb
+C:\Users\HP PROBOOK\Desktop\ADO\Even, Odd, Factorial\obj\Debug\Even, Odd, Factorial.exe
+C:\Users\HP PROBOOK\Desktop\ADO\Even, Odd, Factorial\obj\Debug\Even, Odd, Factorial.pdb
+C:\Users\HP PROBOOK\Desktop\ADO\Even, Odd, Factorial\obj\Debug\Even, Odd, Factorial.exe.config

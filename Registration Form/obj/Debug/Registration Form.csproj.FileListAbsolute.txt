@@ -1,0 +1,11 @@
+C:\Users\HP PROBOOK\Desktop\ADO\Registration Form\bin\Debug\Registration Form.exe.config
+C:\Users\HP PROBOOK\Desktop\ADO\Registration Form\bin\Debug\Registration Form.exe
+C:\Users\HP PROBOOK\Desktop\ADO\Registration Form\bin\Debug\Registration Form.pdb
+C:\Users\HP PROBOOK\Desktop\ADO\Registration Form\obj\Debug\Registration Form.csproj.AssemblyReference.cache
+C:\Users\HP PROBOOK\Desktop\ADO\Registration Form\obj\Debug\Registration_Form.Form1.resources
+C:\Users\HP PROBOOK\Desktop\ADO\Registration Form\obj\Debug\Registration_Form.Properties.Resources.resources
+C:\Users\HP PROBOOK\Desktop\ADO\Registration Form\obj\Debug\Registration Form.csproj.GenerateResource.cache
+C:\Users\HP PROBOOK\Desktop\ADO\Registration Form\obj\Debug\Registration Form.csproj.CoreCompileInputs.cache
+C:\Users\HP PROBOOK\Desktop\ADO\Registration Form\obj\Debug\Registration Form.exe
+C:\Users\HP PROBOOK\Desktop\ADO\Registration Form\obj\Debug\Registration Form.pdb
+C:\Users\HP PROBOOK\Desktop\ADO\Registration Form\obj\Debug\Registration Form.exe.config
