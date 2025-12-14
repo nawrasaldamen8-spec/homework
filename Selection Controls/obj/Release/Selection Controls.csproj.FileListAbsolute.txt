@@ -1,0 +1,10 @@
+C:\Users\USER\Desktop\Selection Controls\bin\Release\Selection Controls.exe.config
+C:\Users\USER\Desktop\Selection Controls\bin\Release\Selection Controls.exe
+C:\Users\USER\Desktop\Selection Controls\bin\Release\Selection Controls.pdb
+C:\Users\USER\Desktop\Selection Controls\obj\Release\Selection Controls.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\Selection Controls\obj\Release\Selection_Controls.Form1.resources
+C:\Users\USER\Desktop\Selection Controls\obj\Release\Selection_Controls.Properties.Resources.resources
+C:\Users\USER\Desktop\Selection Controls\obj\Release\Selection Controls.csproj.GenerateResource.cache
+C:\Users\USER\Desktop\Selection Controls\obj\Release\Selection Controls.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\Selection Controls\obj\Release\Selection Controls.exe
+C:\Users\USER\Desktop\Selection Controls\obj\Release\Selection Controls.pdb
