@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+<key>BrickState</key>
+<true/>
+<key>DeviceName</key>
+<string>iPhone</string>
+<key>FirstFreePairExpired</key>
+<true/>
+<key>PreviousSIMStatus</key>
+<string>kCTSIMSupportSIMStatusNotInserted</string>
+<key>ProtocolVersion</key>
+<string>2</string>
+<key>SBLockdownEverRegisteredKey</key>
+<false/>
+<key>TimeIntervalSince1970</key>
+<integer>1406103042</integer>
+<key>TimeZone</key>
+<string>America/Mexico_City</string>
+<key>UseRaptorCerts</key>
+<false/>
+<key>com.apple.international.Language</key>
+<string>en</string>
+<key>com.apple.international.Locale</key>
+<string>en_US</string>
+<key>com.apple.mobile.backup-CloudBackupEnabled</key>
+<false/>
+<key>com.apple.mobile.backup-RequiresEncryption</key>
+<integer>0</integer>
+<key>com.apple.chaperone-migrated</key>
+<true/>
+<key>com.apple.mobile.lockdown_cache-ActivationState</key>
+<string>FactoryActivated</string>
+<key>com.apple.mobile.restriction-ProhibitAppDelete</key>
+<false/>
+<key>com.apple.mobile.restriction-ProhibitAppInstall</key>
+<false/>
+<key>com.apple.mobile.who-epoch_build</key>
+<string>11D257</string>
+<key>com.apple.mobile.who-uptodate</key>
+<integer>1</integer>
+<key>com.apple.mobile.who-uptodate_build</key>
+<string>11D257</string>
+</dict>
+</plist>
