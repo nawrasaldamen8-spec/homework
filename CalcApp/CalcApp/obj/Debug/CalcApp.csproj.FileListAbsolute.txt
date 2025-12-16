@@ -1,0 +1,10 @@
+C:\Users\USER\source\repos\CalcApp\CalcApp\bin\Debug\CalcApp.exe.config
+C:\Users\USER\source\repos\CalcApp\CalcApp\bin\Debug\CalcApp.exe
+C:\Users\USER\source\repos\CalcApp\CalcApp\bin\Debug\CalcApp.pdb
+C:\Users\USER\source\repos\CalcApp\CalcApp\obj\Debug\CalcApp.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\CalcApp\CalcApp\obj\Debug\CalcApp.Form1.resources
+C:\Users\USER\source\repos\CalcApp\CalcApp\obj\Debug\CalcApp.Properties.Resources.resources
+C:\Users\USER\source\repos\CalcApp\CalcApp\obj\Debug\CalcApp.csproj.GenerateResource.cache
+C:\Users\USER\source\repos\CalcApp\CalcApp\obj\Debug\CalcApp.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\CalcApp\CalcApp\obj\Debug\CalcApp.exe
+C:\Users\USER\source\repos\CalcApp\CalcApp\obj\Debug\CalcApp.pdb
