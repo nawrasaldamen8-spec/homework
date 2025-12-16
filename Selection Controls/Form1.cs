@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Selection_Controls
@@ -15,105 +8,119 @@ namespace Selection_Controls
         public Form1()
         {
             InitializeComponent();
+
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AllowUserToAddRows = false;
         }
 
-        private string AddIdUser(TextBox TextID) { 
-            string studentId = TextID.Text.Trim();
-            if (string.IsNullOrEmpty(Idtxt.Text))
+        class Student
+        {
+            public string Id, Major, Gender, Language, Year, Date;
+
+            public Student(string id, string major, string gender, string language, string year)
             {
-                MessageBox.Show("Please enter a Student ID.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
-
+                Id = id;
+                Major = major;
+                Gender = gender;
+                Language = language;
+                Year = year;
+                Date = DateTime.Now.ToString("yyyy/MM/dd");
             }
-            return studentId;
-        }
-        private string AddLang(CheckBox cSharp, CheckBox Java, CheckBox python) {
-            string Language = "";
-            if (cSharp.Checked) Language += cSharp.Text + " / ";
-            if (Java.Checked) Language += Java.Text + " / ";
-            if (python.Checked) Language += python.Text + " / ";
-          
-            Language = Language.TrimEnd(' ', '/');
 
-
-            return Language;
-        }
-        private string AddMajor(RadioButton cs, RadioButton cn, RadioButton cys) {
             
-            string MajorStr = "";
-            if (cs.Checked) MajorStr = cs.Text;
-            if (cn.Checked) MajorStr = cn.Text;
-            if (cys.Checked) MajorStr = cys.Text;
-            
-            return MajorStr;
-        }
+            public static Student FromForm(Form1 frm)
+            {
+                string major = frm.radioButton1.Checked ? "CS" :
+                               frm.radioButton2.Checked ? "CN" :
+                               frm.radioButton3.Checked ? "CYS" : "Not Entered";
 
-        private string AddGender(RadioButton Male, RadioButton Female) {
+                string gender = frm.MaleRad.Checked ? "Male" :
+                                frm.FemaleRad.Checked ? "Female" : "Not Entered";
 
-            string GenderStr = "";
-            if(Male.Checked) GenderStr = Male.Text;
-            if (Female.Checked) GenderStr = Female.Text;
-           
+                string language = "";
+                if (frm.checkBox1.Checked) language += frm.checkBox1.Text + " / ";
+                if (frm.checkBox2.Checked) language += frm.checkBox2.Text + " / ";
+                if (frm.checkBox3.Checked) language += frm.checkBox3.Text + " / ";
+                language = string.IsNullOrEmpty(language) ? "Not Entered" : language.TrimEnd(' ', '/');
 
-            return GenderStr;
-        }
+                string year = frm.comboBox1.SelectedIndex == -1 ? "Not Entered" : frm.comboBox1.SelectedItem.ToString();
 
-        private string AddYear(ComboBox choice) {
-            if(choice.SelectedIndex == -1)             {
-                return "Not Specified";
+                return new Student(frm.Idtxt.Text, major, gender, language, year);
             }
-            return choice.SelectedItem.ToString();
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
-        private void Major_Enter(object sender, EventArgs e)
+        class StudentGenerator
         {
+            private Random rand = new Random();
+            private string[] majors = { "CS", "CN", "CYS" };
+            private string[] languages = { "C#", "Java", "Python" };
+            private string[] years = { "First", "Second", "Third", "Fourth" };
 
+            public Student Generate(int orderId)
+            {
+                return new Student(
+                    orderId.ToString(),
+                    majors[rand.Next(majors.Length)],
+                    rand.Next(2) == 0 ? "Male" : "Female",
+                    languages[rand.Next(languages.Length)],
+                    years[rand.Next(years.Length)]
+                );
+            }
         }
 
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
-        {
+        private StudentGenerator generator = new StudentGenerator();
+        private bool showDetails = true;
 
+        private bool IsIdValid()
+        {
+            if (string.IsNullOrWhiteSpace(Idtxt.Text))
+            {
+                MessageBox.Show("Please enter a Student ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
         }
 
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        private void AddStudentToGrid(Student s)
         {
-
+            dataGridView1.Rows.Add(s.Id, s.Major, s.Gender, s.Language, s.Year, s.Date);
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void ShowSuccess(Student s)
         {
+            if (!showDetails) return;
 
-        }
+            DialogResult result = MessageBox.Show($@"Record Added Successfully
+Id: {s.Id}
+Major: {s.Major}
+Gender: {s.Gender}
+Language(s): {s.Language}
+Year: {s.Year}
+Date: {s.Date}",
+                "Success",
+                MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Information);
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Gender_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            if (result == DialogResult.Cancel)
+            {
+                showDetails = false;
+            }
         }
 
         private void AddRecored_Click(object sender, EventArgs e)
         {
-            AddIdUser(Idtxt);
-            if (Idtxt.Text != string.Empty ) { 
-                dataGridView1.Rows.Add(Idtxt.Text,
-                    AddMajor(radioButton1,radioButton2,radioButton3),
-                    AddGender(MaleRad,FemaleRad),
-                    AddLang(checkBox1, checkBox2, checkBox3),
-                    AddYear(comboBox1));
-            }
+            if (!IsIdValid()) return;
 
+            Student s = Student.FromForm(this);
+            AddStudentToGrid(s);
+            ShowSuccess(s);
+            ResetForm();
+        }
+
+        private void ResetForm()
+        {
+            Idtxt.Clear();
+            comboBox1.SelectedIndex = -1;
             checkBox1.Checked = false;
             checkBox2.Checked = false;
             checkBox3.Checked = false;
@@ -122,16 +129,34 @@ namespace Selection_Controls
             radioButton3.Checked = false;
             MaleRad.Checked = false;
             FemaleRad.Checked = false;
-            comboBox1.SelectedIndex = -1;
-
-            Idtxt.Clear();
-
-            
         }
 
         private void Clear_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow != null)
+                dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
+        }
+
+        private void AddRandomUsers()
+        {
+            int orderId = dataGridView1.Rows.Count + 1;
+            Student s = generator.Generate(orderId);
+            AddStudentToGrid(s);
+            ShowSuccess(s);
+        }
+
+        private void RandBtn_Click(object sender, EventArgs e)
+        {
+            showDetails = true;
+            for (int i = 0; i < numericUpDown1.Value; i++)
+            {
+                AddRandomUsers();
+            }
         }
     }
 }
