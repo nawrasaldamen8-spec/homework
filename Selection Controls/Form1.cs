@@ -115,6 +115,7 @@ Date: {s.Date}",
             AddStudentToGrid(s);
             ShowSuccess(s);
             ResetForm();
+            countLbl.Text = "Count: " + dataGridView1.RowCount.ToString();
         }
 
         private void ResetForm()
@@ -134,6 +135,7 @@ Date: {s.Date}",
         private void Clear_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
+            countLbl.Text = "Count: ";
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -157,6 +159,8 @@ Date: {s.Date}",
             {
                 AddRandomUsers();
             }
+            countLbl.Text = "Count: " + dataGridView1.RowCount.ToString();
         }
+
     }
 }

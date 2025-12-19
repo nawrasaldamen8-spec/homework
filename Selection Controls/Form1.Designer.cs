@@ -59,6 +59,7 @@
             this.RandBtn = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.RandNum = new System.Windows.Forms.Label();
+            this.countLbl = new System.Windows.Forms.Label();
             this.Major.SuspendLayout();
             this.Gender.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -97,7 +98,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(217, 104);
+            this.checkBox1.Location = new System.Drawing.Point(246, 105);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(45, 20);
             this.checkBox1.TabIndex = 3;
@@ -107,7 +108,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(323, 102);
+            this.checkBox2.Location = new System.Drawing.Point(356, 102);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(63, 20);
             this.checkBox2.TabIndex = 4;
@@ -117,7 +118,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(484, 105);
+            this.checkBox3.Location = new System.Drawing.Point(480, 102);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(70, 20);
             this.checkBox3.TabIndex = 5;
@@ -133,7 +134,7 @@
             this.Major.Controls.Add(this.radioButton1);
             this.Major.Location = new System.Drawing.Point(28, 140);
             this.Major.Name = "Major";
-            this.Major.Size = new System.Drawing.Size(860, 100);
+            this.Major.Size = new System.Drawing.Size(860, 62);
             this.Major.TabIndex = 6;
             this.Major.TabStop = false;
             this.Major.Text = "Major";
@@ -198,7 +199,7 @@
             // 
             this.Gender.Controls.Add(this.FemaleRad);
             this.Gender.Controls.Add(this.MaleRad);
-            this.Gender.Location = new System.Drawing.Point(28, 257);
+            this.Gender.Location = new System.Drawing.Point(28, 226);
             this.Gender.Name = "Gender";
             this.Gender.Size = new System.Drawing.Size(263, 100);
             this.Gender.TabIndex = 7;
@@ -230,9 +231,9 @@
             // AddRecored
             // 
             this.AddRecored.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddRecored.Location = new System.Drawing.Point(28, 363);
+            this.AddRecored.Location = new System.Drawing.Point(28, 332);
             this.AddRecored.Name = "AddRecored";
-            this.AddRecored.Size = new System.Drawing.Size(263, 120);
+            this.AddRecored.Size = new System.Drawing.Size(263, 44);
             this.AddRecored.TabIndex = 9;
             this.AddRecored.Text = "Add Record";
             this.AddRecored.UseVisualStyleBackColor = true;
@@ -261,12 +262,11 @@
             this.joined});
             this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.dataGridView1.Location = new System.Drawing.Point(310, 257);
-            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Location = new System.Drawing.Point(310, 226);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(578, 226);
+            this.dataGridView1.Size = new System.Drawing.Size(578, 257);
             this.dataGridView1.TabIndex = 11;
             // 
             // IdCol
@@ -338,9 +338,9 @@
             // 
             // RandBtn
             // 
-            this.RandBtn.Location = new System.Drawing.Point(770, 105);
+            this.RandBtn.Location = new System.Drawing.Point(28, 441);
             this.RandBtn.Name = "RandBtn";
-            this.RandBtn.Size = new System.Drawing.Size(118, 35);
+            this.RandBtn.Size = new System.Drawing.Size(263, 42);
             this.RandBtn.TabIndex = 14;
             this.RandBtn.Text = "Create Random";
             this.RandBtn.UseVisualStyleBackColor = true;
@@ -348,19 +348,29 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(770, 77);
+            this.numericUpDown1.AutoSize = true;
+            this.numericUpDown1.Location = new System.Drawing.Point(28, 413);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(118, 22);
+            this.numericUpDown1.Size = new System.Drawing.Size(263, 22);
             this.numericUpDown1.TabIndex = 15;
             // 
             // RandNum
             // 
             this.RandNum.AutoSize = true;
-            this.RandNum.Location = new System.Drawing.Point(767, 58);
+            this.RandNum.Location = new System.Drawing.Point(25, 394);
             this.RandNum.Name = "RandNum";
             this.RandNum.Size = new System.Drawing.Size(94, 16);
             this.RandNum.TabIndex = 16;
             this.RandNum.Text = "Users Number";
+            // 
+            // countLbl
+            // 
+            this.countLbl.AutoSize = true;
+            this.countLbl.Location = new System.Drawing.Point(307, 499);
+            this.countLbl.Name = "countLbl";
+            this.countLbl.Size = new System.Drawing.Size(47, 16);
+            this.countLbl.TabIndex = 17;
+            this.countLbl.Text = "Count: ";
             // 
             // Form1
             // 
@@ -368,6 +378,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(900, 537);
+            this.Controls.Add(this.countLbl);
             this.Controls.Add(this.RandNum);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.RandBtn);
@@ -429,6 +440,7 @@
         private System.Windows.Forms.Button RandBtn;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label RandNum;
+        private System.Windows.Forms.Label countLbl;
     }
 }
 
