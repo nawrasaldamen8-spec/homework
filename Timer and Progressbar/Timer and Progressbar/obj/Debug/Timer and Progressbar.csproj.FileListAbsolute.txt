@@ -1,0 +1,10 @@
+C:\Users\USER\source\repos\Timer and Progressbar\Timer and Progressbar\bin\Debug\Timer and Progressbar.exe.config
+C:\Users\USER\source\repos\Timer and Progressbar\Timer and Progressbar\bin\Debug\Timer and Progressbar.exe
+C:\Users\USER\source\repos\Timer and Progressbar\Timer and Progressbar\bin\Debug\Timer and Progressbar.pdb
+C:\Users\USER\source\repos\Timer and Progressbar\Timer and Progressbar\obj\Debug\Timer and Progressbar.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\Timer and Progressbar\Timer and Progressbar\obj\Debug\Timer_and_Progressbar.Form1.resources
+C:\Users\USER\source\repos\Timer and Progressbar\Timer and Progressbar\obj\Debug\Timer_and_Progressbar.Properties.Resources.resources
+C:\Users\USER\source\repos\Timer and Progressbar\Timer and Progressbar\obj\Debug\Timer and Progressbar.csproj.GenerateResource.cache
+C:\Users\USER\source\repos\Timer and Progressbar\Timer and Progressbar\obj\Debug\Timer and Progressbar.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\Timer and Progressbar\Timer and Progressbar\obj\Debug\Timer and Progressbar.exe
+C:\Users\USER\source\repos\Timer and Progressbar\Timer and Progressbar\obj\Debug\Timer and Progressbar.pdb
